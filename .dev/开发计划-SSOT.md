@@ -185,7 +185,7 @@ P2 账号系统           P3 角色扮演·基础
 - 依赖：P1（界面术语）、P2（共享库/保存引用登录与卡槽）
 - 文档：`roleplay/index.md`、`roleplay/character-selection.md`、`roleplay/create-character.md`、`roleplay/user-role.md`、`roleplay/import-export.md`、`roleplay/shared-library.md`
 
-#### P4 · 角色扮演·进阶 ⬜
+#### P4 · 角色扮演·进阶 ✅
 - 依赖：P3
 - 文档：`roleplay/world-info.md`、`roleplay/regex.md`、`roleplay/variables.md`
 - 关键产出：世界书触发方式/插入位置/约束强度/递归、SillyTavern 迁移对照。
