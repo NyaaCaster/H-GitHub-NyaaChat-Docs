@@ -39,7 +39,7 @@
 
 1. 打开 NyaaChat 的账号面板。
 2. 点击猫粮余额旁边的 **"充值"** 按钮。
-3. 浏览器会在新窗口打开 NyaaAcount 充值页面（`h.nyaa.host:5110/?view=recharge`）。
+3. 浏览器会在新窗口打开 [NyaaAcount 充值页面](http://h.nyaa.host:5110/?view=recharge)。
 4. 在 NyaaAcount 完成支付流程。
 5. 回到 NyaaChat 账号面板，余额会自动刷新。
 
