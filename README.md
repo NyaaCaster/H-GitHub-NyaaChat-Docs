@@ -95,21 +95,49 @@ Windows 编辑 Markdown → git push → macmini git pull → 自动 HMR 生效
 **不需要重建镜像，不需要重启容器。** VitePress dev server 监听文件变更，HMR 即时热更新。
 
 ```bash
-# Windows
+# Windows（开发机）
 cd H:\GitHub\NyaaChat-Docs
 # 编辑 doc-files/*.md ...
 git add doc-files/xxx.md
 git commit -m "docs: 更新 xxx 文档"
 git push origin master
 
-# macmini
+# macmini（部署机）
 ssh U-MacMini-1
 cd /root/DockerContainer/NyaaChat-Docs/doc-files
 git pull origin master
 # HMR 自动生效，无需其他操作
 ```
 
-> **注意**：macmini 上的 `doc-files/` 需要是一个 Git 仓库（clone 或手动 init + pull），才能用 `git pull` 更新内容。
+#### git pull 鉴权原理
+
+macmini 上 `doc-files/.git/config` 的 remote URL 嵌入了 GitHub PAT，格式为：
+
+```
+https://<GITHUB_PAT>@github.com/NyaaCaster/H-GitHub-NyaaChat-Docs.git
+```
+
+PAT 从 `.env` 的 `GITHUB_PAT` 变量注入。首次初始化：
+
+```bash
+# macmini（仅首次，已配置则跳过）
+cd /root/DockerContainer/NyaaChat-Docs/doc-files
+git init
+git remote add origin https://<GITHUB_PAT>@github.com/NyaaCaster/H-GitHub-NyaaChat-Docs.git
+git fetch --depth=1 origin master
+git reset --hard FETCH_HEAD
+```
+
+#### 验证更新
+
+```bash
+# macmini — 检查当前版本
+cd /root/DockerContainer/NyaaChat-Docs/doc-files
+git log --oneline -3
+
+# 检查 HMR 是否生效（查看是否有文件变更日志）
+docker logs nyaachat-docs 2>&1 | tail -5
+```
 
 ### 配置变更（`.vitepress/config.mjs`、主题、Dockerfile、package.json）
 
