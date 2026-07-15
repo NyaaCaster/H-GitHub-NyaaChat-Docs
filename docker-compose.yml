@@ -1,0 +1,19 @@
+# NyaaChat-Docs dev compose — local development with `build: .`.
+# Binds doc-files/ for hot-reload so content changes appear instantly.
+services:
+  nyaachat-docs:
+    build: .
+    container_name: nyaachat-docs
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "5112:5173"
+    volumes:
+      - ./doc-files:/app/doc-files
+    networks:
+      - nyaachat-net
+    restart: unless-stopped
+
+networks:
+  nyaachat-net:
+    external: true

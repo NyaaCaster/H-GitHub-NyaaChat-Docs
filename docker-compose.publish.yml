@@ -1,0 +1,25 @@
+# NyaaChat-Docs publish compose — macmini deployment.
+#
+# Differs from the dev compose only in:
+#   - No `build:` — image pulled from NyaaDockerHUB private registry.
+#   - `pull_policy: always` ensures :latest is refreshed on `docker compose up`.
+#   - Image ref uses ${PRIVATE_DOCKER_REGISTRY_HOST:?err} so compose fails fast
+#     if the variable is not set in .env.
+services:
+  nyaachat-docs:
+    image: ${PRIVATE_DOCKER_REGISTRY_HOST:?err}/nyaachat-docs:latest
+    pull_policy: always
+    container_name: nyaachat-docs
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "5112:5173"
+    volumes:
+      - ./doc-files:/app/doc-files
+    networks:
+      - nyaachat-net
+    restart: unless-stopped
+
+networks:
+  nyaachat-net:
+    external: true

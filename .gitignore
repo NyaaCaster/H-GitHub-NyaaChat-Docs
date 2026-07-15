@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.cache/
+.vitepress/cache/
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+# Claude Code per-machine settings
+.claude/settings.local.json
