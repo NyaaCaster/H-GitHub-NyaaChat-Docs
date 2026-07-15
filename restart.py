@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 PROJECT = "nyaachat-docs"
-COMPOSE_FILE = "docker-compose.publish.yml"
+COMPOSE_FILE = "docker-compose.yml"
 
 
 def run(cmd: list[str]) -> subprocess.CompletedProcess:
