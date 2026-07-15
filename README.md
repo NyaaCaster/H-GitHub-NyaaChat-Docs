@@ -104,10 +104,9 @@ git push origin master
 
 # macmini（部署机）
 ssh U-MacMini-1
-cd /root/DockerContainer/NyaaChat-Docs/repo
-git pull origin master
-cp -r doc-files/* /root/DockerContainer/NyaaChat-Docs/doc-files/
-docker compose -f /root/DockerContainer/NyaaChat-Docs/docker-compose.yml restart
+cd /root/DockerContainer/NyaaChat-Docs
+python3 sync-docs.py
+# 或跳过重启：python3 sync-docs.py --no-restart
 ```
 
 #### 为什么需要 repo + cp 两步
