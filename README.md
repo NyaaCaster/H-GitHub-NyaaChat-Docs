@@ -89,10 +89,10 @@ python3 restart.py
 ### 日常内容更新（仅文档，不改配置/依赖）
 
 ```
-Windows 编辑 Markdown → git push → macmini git pull → 自动 HMR 生效
+Windows 编辑 Markdown → git push → macmini git pull + cp → 重启容器
 ```
 
-**不需要重建镜像，不需要重启容器。** VitePress dev server 监听文件变更，HMR 即时热更新。
+**不需要重建镜像**。文件更新后重启容器即可（VitePress 重启 < 3 秒）。
 
 ```bash
 # Windows（开发机）
@@ -104,14 +104,21 @@ git push origin master
 
 # macmini（部署机）
 ssh U-MacMini-1
-cd /root/DockerContainer/NyaaChat-Docs/doc-files
+cd /root/DockerContainer/NyaaChat-Docs/repo
 git pull origin master
-# HMR 自动生效，无需其他操作
+cp -r doc-files/* /root/DockerContainer/NyaaChat-Docs/doc-files/
+docker compose -f /root/DockerContainer/NyaaChat-Docs/docker-compose.yml restart
 ```
+
+#### 为什么需要 repo + cp 两步
+
+GitHub 仓库根目录有 `doc-files/` 子目录，而 Docker bind mount 的目标也是 `doc-files/`。直接在 `doc-files/` 内 `git clone` 会产生嵌套的 `doc-files/doc-files/`，导致 VitePress 读到错误路径。
+
+正确做法：仓库放在独立目录 `/root/DockerContainer/NyaaChat-Docs/repo/`，`git pull` 后用 `cp` 把 `repo/doc-files/*` 同步到 bind mount 目录。
 
 #### git pull 鉴权原理
 
-macmini 上 `doc-files/.git/config` 的 remote URL 嵌入了 GitHub PAT，格式为：
+`repo/.git/config` 的 remote URL 嵌入了 GitHub PAT：
 
 ```
 https://<GITHUB_PAT>@github.com/NyaaCaster/H-GitHub-NyaaChat-Docs.git
@@ -121,23 +128,21 @@ PAT 从 `.env` 的 `GITHUB_PAT` 变量注入。首次初始化：
 
 ```bash
 # macmini（仅首次，已配置则跳过）
-cd /root/DockerContainer/NyaaChat-Docs/doc-files
-git init
-git remote add origin https://<GITHUB_PAT>@github.com/NyaaCaster/H-GitHub-NyaaChat-Docs.git
-git fetch --depth=1 origin master
-git reset --hard FETCH_HEAD
+git clone --depth=1 https://<GITHUB_PAT>@github.com/NyaaCaster/H-GitHub-NyaaChat-Docs.git \
+  /root/DockerContainer/NyaaChat-Docs/repo
+cp -r /root/DockerContainer/NyaaChat-Docs/repo/doc-files/* \
+  /root/DockerContainer/NyaaChat-Docs/doc-files/
 ```
 
 #### 验证更新
 
 ```bash
-# macmini — 检查当前版本
-cd /root/DockerContainer/NyaaChat-Docs/doc-files
+# macmini — 检查本地版本
+cd /root/DockerContainer/NyaaChat-Docs/repo
 git log --oneline -3
 
-# 检查 HMR 是否生效（查看是否有文件变更日志）
-docker logs nyaachat-docs 2>&1 | tail -5
-```
+# 检查容器状态
+docker ps --filter name=nyaachat-docs
 
 ### 配置变更（`.vitepress/config.mjs`、主题、Dockerfile、package.json）
 
