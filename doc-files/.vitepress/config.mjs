@@ -5,8 +5,6 @@ export default defineConfig({
   title: 'NyaaChat 文档',
   description: 'NyaaChat 使用文档与开发指南',
 
-  srcDir: './doc-files',
-
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
