@@ -181,7 +181,7 @@ P2 账号系统           P3 角色扮演·基础
 - 文档：`account/index.md`、`account/login-register.md`、`account/profile.md`、`account/catfood-recharge.md`、`account/quota-expand.md`、`account/cloud-sync.md`
 - 关键产出：登录/注册（NyaaAcount 跳转）、猫粮、各扩容项数值表、云同步流程。为后续板块提供可引用的经济/额度概念。
 
-#### P3 · 角色扮演·基础 ⬜
+#### P3 · 角色扮演·基础 ✅
 - 依赖：P1（界面术语）、P2（共享库/保存引用登录与卡槽）
 - 文档：`roleplay/index.md`、`roleplay/character-selection.md`、`roleplay/create-character.md`、`roleplay/user-role.md`、`roleplay/import-export.md`、`roleplay/shared-library.md`
 
