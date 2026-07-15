@@ -2,6 +2,9 @@
 FROM node:22-alpine
 WORKDIR /app
 
+# git is required by VitePress `lastUpdated: true` (reads git log timestamps)
+RUN apk add --no-cache git
+
 # Copy package files first for layer caching.
 COPY package*.json ./
 RUN --mount=type=cache,target=/root/.npm \
