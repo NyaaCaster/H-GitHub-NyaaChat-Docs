@@ -5,7 +5,7 @@ dist/
 .DS_Store
 *.log
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 # Claude Code per-machine settings
 .claude/settings.local.json
