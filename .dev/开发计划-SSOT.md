@@ -176,7 +176,7 @@ P2 账号系统           P3 角色扮演·基础
 - 文档：`guide/what-is-nyaachat.md`、`guide/quick-start.md`、`guide/interface-tour.md`、`guide/configure-model.md`、`guide/first-chat.md`
 - 关键产出：确立全站通用术语（顶栏两行图标名、弹窗、猫粮等首次出现的名词），QinyAPI 配置主线示例。
 
-#### P2 · 账号系统 ⬜
+#### P2 · 账号系统 ✅
 - 依赖：P1
 - 文档：`account/index.md`、`account/login-register.md`、`account/profile.md`、`account/catfood-recharge.md`、`account/quota-expand.md`、`account/cloud-sync.md`
 - 关键产出：登录/注册（NyaaAcount 跳转）、猫粮、各扩容项数值表、云同步流程。为后续板块提供可引用的经济/额度概念。
