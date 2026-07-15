@@ -55,7 +55,7 @@
 - 额外的角色约束和行为规范
 - 对 AI 在特定话题上的补充指示
 
-文本中可以使用宏：`{{char}}`（角色名）、`{{user}}`（用户名）、`{{persona}}`（用户人设）等。也可以用角色变量：`{{affection}}`、`{{hp}}`。
+文本中可以使用宏：<code v-pre>{{char}}</code>（角色名）、<code v-pre>{{user}}</code>（用户名）、<code v-pre>{{persona}}</code>（用户人设）等。也可以用角色变量：<code v-pre>{{affection}}</code>、<code v-pre>{{hp}}</code>。
 
 ### 插入位置
 
