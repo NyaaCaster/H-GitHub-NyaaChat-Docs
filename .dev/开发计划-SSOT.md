@@ -190,9 +190,10 @@ P2 账号系统           P3 角色扮演·基础
 - 文档：`roleplay/world-info.md`、`roleplay/regex.md`、`roleplay/variables.md`
 - 关键产出：世界书触发方式/插入位置/约束强度/递归、SillyTavern 迁移对照。
 
-#### P5 · 知识库 ⬜
+#### P5 · 知识库 ✅
 - 依赖：P1、P2（额度/猫粮）、P3–P4（角色绑定、世界书关联入口）
 - 文档：`knowledge-base/index.md`、`knowledge-base/prerequisites.md`、`knowledge-base/manage.md`、`knowledge-base/documents.md`、`knowledge-base/link-to-character.md`、`knowledge-base/quota.md`
+- 关键产出：RAG 通俗概念解释、嵌入模型配置指南（含健康检查流程+更换模型警告）、知识库 CRUD+用量条三态、文档上传限制与分块嵌入流程、世界书规则 KB 绑定全链路（含 `<search_context>` 注入格式+跨账号只读检索）、KB 栈额度系统（3/10/+2/50）
 
 #### P6 · 收尾 ⬜
 - 依赖：P1–P5
