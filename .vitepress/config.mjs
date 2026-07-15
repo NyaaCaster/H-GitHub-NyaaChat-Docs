@@ -97,4 +97,10 @@ export default defineConfig({
     returnToTopLabel: '回到顶部',
     langMenuLabel: '语言',
   },
+
+  vite: {
+    server: {
+      allowedHosts: ['h.nyaa.host', 'h.hony-wen.com'],
+    },
+  },
 })
