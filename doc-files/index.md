@@ -3,10 +3,10 @@ layout: home
 
 hero:
   name: "NyaaChat"
-  text: "本地 AI 角色扮演聊天"
+  text: "私域 AI 角色扮演聊天"
   tagline: "开箱即用的对话模型、沉浸式角色扮演、私有知识库与账号体系"
   image:
-    src: /logo.svg
+    src: /hero.svg
     alt: NyaaChat
   actions:
     - theme: brand
