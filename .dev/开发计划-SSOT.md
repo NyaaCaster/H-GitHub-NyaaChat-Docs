@@ -163,12 +163,13 @@ P2 账号系统           P3 角色扮演·基础
 
 | 交付项 | 状态 |
 |--------|------|
-| 删除临时占位文档（旧 quick-start / features / faq / index 占位内容） | ⬜ |
-| 按目标目录树创建全部骨架文档（仅一级标题 + 段落标题，无正文） | ⬜ |
-| 更新 `config.mjs` 的 nav / sidebar | ⬜ |
-| 写入本 SSOT + 阶段交接文档 | 🟡 |
+| 删除临时占位文档（旧 quick-start / features / faq / index 占位内容） | ✅ |
+| 按目标目录树创建全部骨架文档（仅一级标题 + 段落标题，无正文） | ✅ |
+| 更新 `config.mjs` 的 nav / sidebar | ✅ |
+| 写入本 SSOT + 阶段交接文档（`.dev/阶段交接-001.md`） | ✅ |
 
-> P0 各子项状态在本次会话内推进，完成后统一置 ✅。
+> P0 全部子项已完成。
+> 骨架落地记录：`features/` 目录已删除；`index.md`（去除「扩展系统」卡片、四大板块 feature）、`faq.md`、`guide/quick-start.md` 由占位内容改写为骨架；新建 guide×5 / roleplay×9 / knowledge-base×6 / account×6，共 28 个 `.md`；`config.mjs` nav/sidebar 已按四大板块重排。
 
 #### P1 · 开始使用 ⬜
 - 依赖：无

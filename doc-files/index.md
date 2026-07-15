@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "NyaaChat"
-  text: "智能聊天平台"
-  tagline: "功能丰富的 AI 聊天应用，支持多模型、角色扮演、知识库等 🚀 文档持续更新中"
+  text: "本地 AI 角色扮演聊天"
+  tagline: "开箱即用的对话模型、沉浸式角色扮演、私有知识库与账号体系"
   image:
     src: /logo.svg
     alt: NyaaChat
@@ -13,23 +13,27 @@ hero:
       text: 快速开始
       link: /guide/quick-start
     - theme: alt
-      text: 功能介绍
-      link: /features/
+      text: NyaaChat 是什么
+      link: /guide/what-is-nyaachat
     - theme: alt
       text: GitHub
       link: https://github.com/NyaaCaster/NyaaChat
 
 features:
-  - icon: 🤖
-    title: 多模型支持
-    details: 支持 OpenAI、Claude、DeepSeek 等多种 AI 模型，自由切换
+  - icon: 🚀
+    title: 开始使用
+    details: 打开即用，三步配置好对话模型，发出第一条消息
+    link: /guide/quick-start
   - icon: 🎭
     title: 角色扮演
-    details: 创建和管理自定义角色，沉浸式对话体验
+    details: 创建角色、世界书、正则与变量，打造专属沉浸式对话
+    link: /roleplay/
   - icon: 📚
     title: 知识库
-    details: 上传文档构建知识库，让 AI 基于你的资料回答
-  - icon: 🔌
-    title: 扩展系统
-    details: 丰富的扩展生态，支持 SillyTavern 兼容扩展
+    details: 上传文档构建 RAG 知识库，让角色基于你的资料应答
+    link: /knowledge-base/
+  - icon: 🐾
+    title: 账号系统
+    details: 登录同步、猫粮充值与额度扩容，多端接续你的创作
+    link: /account/
 ---
