@@ -171,7 +171,7 @@ P2 账号系统           P3 角色扮演·基础
 > P0 全部子项已完成。
 > 骨架落地记录：`features/` 目录已删除；`index.md`（去除「扩展系统」卡片、四大板块 feature）、`faq.md`、`guide/quick-start.md` 由占位内容改写为骨架；新建 guide×5 / roleplay×9 / knowledge-base×6 / account×6，共 28 个 `.md`；`config.mjs` nav/sidebar 已按四大板块重排。
 
-#### P1 · 开始使用 ⬜
+#### P1 · 开始使用 ✅
 - 依赖：无
 - 文档：`guide/what-is-nyaachat.md`、`guide/quick-start.md`、`guide/interface-tour.md`、`guide/configure-model.md`、`guide/first-chat.md`
 - 关键产出：确立全站通用术语（顶栏两行图标名、弹窗、猫粮等首次出现的名词），QinyAPI 配置主线示例。
