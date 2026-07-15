@@ -195,9 +195,10 @@ P2 账号系统           P3 角色扮演·基础
 - 文档：`knowledge-base/index.md`、`knowledge-base/prerequisites.md`、`knowledge-base/manage.md`、`knowledge-base/documents.md`、`knowledge-base/link-to-character.md`、`knowledge-base/quota.md`
 - 关键产出：RAG 通俗概念解释、嵌入模型配置指南（含健康检查流程+更换模型警告）、知识库 CRUD+用量条三态、文档上传限制与分块嵌入流程、世界书规则 KB 绑定全链路（含 `<search_context>` 注入格式+跨账号只读检索）、KB 栈额度系统（3/10/+2/50）
 
-#### P6 · 收尾 ⬜
+#### P6 · 收尾 ✅
 - 依赖：P1–P5
-- 交付：`index.md` 首页终稿、`faq.md`、`config.mjs` 导航与实际文档全量校对、全站交叉链接（板块间「详见」互链）核查。
+- 交付：`index.md` 首页终稿（feature 卡片文本优化）、`faq.md`（28 个 Q&A 覆盖 7 个主题）、全站审计（55 链接 0 断链、28 侧边栏条目全匹配）、CLAUDE.md 修复
+- V1 全部 6 个阶段完成，28 篇文档全部有正文
 
 ---
 

@@ -22,18 +22,18 @@ hero:
 features:
   - icon: 🚀
     title: 开始使用
-    details: 打开即用，三步配置好对话模型，发出第一条消息
+    details: 从界面导览到 QinyAPI 配置，三步发出第一条对话，快速上手 NyaaChat
     link: /guide/quick-start
   - icon: 🎭
     title: 角色扮演
-    details: 创建角色、世界书、正则与变量，打造专属沉浸式对话
+    details: 从角色创建、世界书规则到正则替换与变量系统——完整的角色扮演工具箱
     link: /roleplay/
   - icon: 📚
     title: 知识库
-    details: 上传文档构建 RAG 知识库，让角色基于你的资料应答
+    details: 上传文档构建私有 RAG 知识库，混合语义检索，绑定角色规则自动注入对话
     link: /knowledge-base/
   - icon: 🐾
     title: 账号系统
-    details: 登录同步、猫粮充值与额度扩容，多端接续你的创作
+    details: NyaaAcount 统一登录、猫粮经济、五项额度扩容、云端设置与记录同步
     link: /account/
 ---
