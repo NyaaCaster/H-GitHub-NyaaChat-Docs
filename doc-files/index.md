@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "NyaaChat"
   text: "智能聊天平台"
-  tagline: "功能丰富的 AI 聊天应用，支持多模型、角色扮演、知识库等"
+  tagline: "功能丰富的 AI 聊天应用，支持多模型、角色扮演、知识库等 🚀 文档持续更新中"
   image:
     src: /logo.svg
     alt: NyaaChat
