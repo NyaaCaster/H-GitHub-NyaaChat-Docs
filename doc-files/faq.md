@@ -42,7 +42,7 @@
 通常是因为接入点不可达——检查 Base URL 是否正确、网络是否正常、是否存在防火墙阻断。如果你在国内使用 `.com` 接入点，尝试换为 `.icu` 接入点。
 
 **该用哪个模型？**  
-没有"最好"的模型，取决于你的需求：角色扮演推荐 Gemini 2.5 Pro 或 claude-opus-4-8（创意和情感表现力强）；需要严谨逻辑推理时推荐 Claude 或 GPT-4o；预算敏感时 DeepSeek 性价比高。详见 [配置对话模型](./guide/configure-model)。
+没有"最好"的模型，取决于你的需求：角色扮演推荐 gemini-2.5-pro 或 claude-opus-4-8（创意和情感表现力强）；需要严谨逻辑推理时推荐 Claude 或 GPT-4o；预算敏感时 DeepSeek 性价比高。详见 [配置对话模型](./guide/configure-model)。
 
 **对话模型和嵌入模型是同一个 API Key 吗？**  
 不是。对话模型负责生成回复，嵌入模型负责知识库的语义搜索——它们是完全独立的两个服务，需要分别配置各自的 API Key。详见 [前置准备](./knowledge-base/prerequisites)。
