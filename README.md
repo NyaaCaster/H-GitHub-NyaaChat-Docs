@@ -75,13 +75,13 @@ python rebuild.py
 mkdir -p /root/DockerContainer/NyaaChat-Docs/doc-files
 
 # 传输部署文件
-scp -r doc-files/*                    U-MacMini-1:/root/DockerContainer/NyaaChat-Docs/doc-files/
-scp    docker-compose.publish.yml     U-MacMini-1:/root/DockerContainer/NyaaChat-Docs/docker-compose.yml
-scp    restart.py                     U-MacMini-1:/root/DockerContainer/NyaaChat-Docs/
-scp    .env.macmini                   U-MacMini-1:/root/DockerContainer/NyaaChat-Docs/.env
+scp -r doc-files/*                    macmini:/root/DockerContainer/NyaaChat-Docs/doc-files/
+scp    docker-compose.publish.yml     macmini:/root/DockerContainer/NyaaChat-Docs/docker-compose.yml
+scp    restart.py                     macmini:/root/DockerContainer/NyaaChat-Docs/
+scp    .env.macmini                   macmini:/root/DockerContainer/NyaaChat-Docs/.env
 
 # macmini（启动）
-ssh U-MacMini-1
+ssh macmini
 cd /root/DockerContainer/NyaaChat-Docs
 python3 restart.py
 ```
@@ -103,7 +103,7 @@ git commit -m "docs: 更新 xxx 文档"
 git push origin master
 
 # macmini（部署机）
-ssh U-MacMini-1
+ssh macmini
 cd /root/DockerContainer/NyaaChat-Docs
 python3 sync-docs.py
 # 或跳过重启：python3 sync-docs.py --no-restart
@@ -240,7 +240,7 @@ vite: {
 检查 macmini 上 `doc-files/` 目录是否有内容：
 
 ```bash
-ssh U-MacMini-1 "ls /root/DockerContainer/NyaaChat-Docs/doc-files/"
+ssh macmini "ls /root/DockerContainer/NyaaChat-Docs/doc-files/"
 ```
 
 如果为空，需要 scp 文档内容过去（首次部署遗漏）。
@@ -250,7 +250,7 @@ ssh U-MacMini-1 "ls /root/DockerContainer/NyaaChat-Docs/doc-files/"
 检查 bind mount 是否覆盖了镜像内的配置：
 
 ```bash
-ssh U-MacMini-1 "grep allowedHosts /root/DockerContainer/NyaaChat-Docs/doc-files/.vitepress/config.mjs"
+ssh macmini "grep allowedHosts /root/DockerContainer/NyaaChat-Docs/doc-files/.vitepress/config.mjs"
 ```
 
 如果 macmini 上的配置文件是旧版，需要 scp 最新版过去。
