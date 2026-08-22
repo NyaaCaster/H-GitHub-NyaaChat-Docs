@@ -47,7 +47,7 @@ python rebuild.py --skip-push  # 仅本地构建（离线/调试）
 
 ## macmini 部署端重启
 
-在 macmini（`U-MacMini-1`，`192.168.31.141`）上部署/更新：
+在 macmini（`macmini`，`192.168.31.141`）上部署/更新：
 
 ```bash
 python3 restart.py              # 拉取最新镜像 + 重启
