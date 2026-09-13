@@ -17,7 +17,15 @@ export default defineConfig({
       { text: '开始使用', link: '/guide/what-is-nyaachat' },
       { text: '角色扮演', link: '/roleplay/' },
       { text: '知识库', link: '/knowledge-base/' },
+      { text: '生图', link: '/features/image-generation' },
       { text: '账号系统', link: '/account/' },
+      {
+        text: '进阶功能',
+        items: [
+          { text: '持久记忆', link: '/features/memory' },
+          { text: '破甲模块', link: '/features/bypass' },
+        ],
+      },
       { text: '常见问题', link: '/faq' },
     ],
 
@@ -73,6 +81,16 @@ export default defineConfig({
             { text: '猫粮与充值', link: '/account/catfood-recharge' },
             { text: '额度与扩容', link: '/account/quota-expand' },
             { text: '云同步', link: '/account/cloud-sync' },
+          ],
+        },
+      ],
+      '/features/': [
+        {
+          text: '进阶功能',
+          items: [
+            { text: '生图（ComfyUI 与图片供应商）', link: '/features/image-generation' },
+            { text: '持久记忆', link: '/features/memory' },
+            { text: '破甲模块（Answerer·Flagalac）', link: '/features/bypass' },
           ],
         },
       ],

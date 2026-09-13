@@ -36,4 +36,12 @@ features:
     title: 账号系统
     details: NyaaAcount 统一登录、猫粮经济、五项额度扩容、云端设置与记录同步
     link: /account/
+  - icon: 🔥
+    title: 破甲模块
+    details: 面向 QinyAPI 的 Gemini 模型，按目标开启破甲、按需勾选设定条目
+    link: /features/bypass
+  - icon: 🎨
+    title: 生图
+    details: 内置 NyaaComfyUI 工作流与画风，提示词由独立智能体生成；也支持自建 ComfyUI 与图片 API
+    link: /features/image-generation
 ---
