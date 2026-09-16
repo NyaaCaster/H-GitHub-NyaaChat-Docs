@@ -10,6 +10,7 @@ Usage:
 
 import argparse
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -18,10 +19,34 @@ REPO_DIR = "/root/DockerContainer/NyaaChat-Docs/repo"
 DOCS_DIR = "/root/DockerContainer/NyaaChat-Docs/doc-files"
 COMPOSE_FILE = "/root/DockerContainer/NyaaChat-Docs/docker-compose.yml"
 
+# macmini installs docker via snap, so /snap/bin is often missing from the PATH
+# of a non-interactive SSH session; look there before giving up.
+DOCKER_FALLBACK_DIRS = (
+    "/snap/bin",
+    "/var/lib/snapd/snap/bin",
+    "/usr/local/bin",
+    "/usr/bin",
+)
+
 
 def run(cmd: list[str]) -> None:
     print(f"  -> {' '.join(cmd)}")
     subprocess.run(cmd, check=True)
+
+
+def resolve_docker() -> str:
+    """Return the docker CLI path, tolerating snap-only installs (e.g. macmini)."""
+    found = shutil.which("docker")
+    if found:
+        return found
+    for directory in DOCKER_FALLBACK_DIRS:
+        candidate = os.path.join(directory, "docker")
+        if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
+            os.environ["PATH"] = directory + os.pathsep + os.environ.get("PATH", "")
+            print(f"  (docker not on PATH, using {candidate})")
+            return candidate
+    print("ERROR: docker CLI not found; install docker or add it to PATH", file=sys.stderr)
+    sys.exit(2)
 
 
 def is_same_filesystem(src: str, dst: str) -> bool:
@@ -60,7 +85,7 @@ def main() -> None:
         print("[3/3] skip restart (--no-restart)")
     else:
         print("[3/3] docker restart...")
-        run(["docker", "compose", "-f", COMPOSE_FILE, "restart"])
+        run([resolve_docker(), "compose", "-f", COMPOSE_FILE, "restart"])
 
     print("=== done ===")
     subprocess.run(["git", "-C", REPO_DIR, "log", "--oneline", "-3"])
