@@ -8,7 +8,7 @@ NyaaChat 内置的**破甲模块**用于应对 Gemini 系列模型在创作场�
 
 | 项 | 说明 |
 |------|------|
-| 生效平台 | **仅 QinyAPI** 提供的 Gemini 模型；其他供应商、其他模型族无效 |
+| 生效平台 | 仅 [**QinyAPI**](https://love.qinyan.icu/register?aff=btB0) 提供的 Gemini 模型；其他供应商、其他模型族无效 |
 | 可用模型 | `gemini-2.5-pro`、`gemini-3.1-pro-preview`、`gemini-3.7-flash` |
 | 当前测试范围 | 开发阶段**只在默认组**落地测试；其他分组下同名、异名的模型均无法保证效果 |
 
