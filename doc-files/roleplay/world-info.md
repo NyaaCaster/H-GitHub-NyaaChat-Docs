@@ -57,7 +57,19 @@
 - 额外的角色约束和行为规范
 - 对 AI 在特定话题上的补充指示
 
-文本中可以使用宏：<code v-pre>{{char}}</code>（角色名）、<code v-pre>{{user}}</code>（用户名）、<code v-pre>{{persona}}</code>（用户人设）等。也可以用角色变量：<code v-pre>{{affection}}</code>、<code v-pre>{{hp}}</code>。
+文本中可以使用宏：<code v-pre>{{char}}</code>（角色名）、<code v-pre>{{user}}</code>（用户名）、<code v-pre>{{persona}}</code>（用户人设）等。它们会在构建提示词时替换成当前值。
+
+如果角色卡自带 JS 脚本（需要先在「扩展」里启用 **「脚本运行器」** 插件），规则内容里还可以读取脚本维护的**角色变量**：
+
+| 宏 | 读取 | 输出 |
+|----|------|------|
+| <code v-pre>{{get_message_variable::路径}}</code> / <code v-pre>{{format_message_variable::路径}}</code> | 当前楼层的变量 | 一行 JSON / YAML 块 |
+| <code v-pre>{{get_chat_variable::路径}}</code> / <code v-pre>{{format_chat_variable::路径}}</code> | 当前对话的变量 | 一行 JSON / YAML 块 |
+| <code v-pre>{{get_global_variable::路径}}</code> / <code v-pre>{{format_global_variable::路径}}</code> | 全局变量 | 一行 JSON / YAML 块 |
+
+含这类宏的条目会**按变量的当前值动态渲染**——变量变了，AI 每次收到的这段内容也跟着变。完整的用法（路径怎么写、`get_` 与 `format_` 的区别）见 [角色变量](./variables)。
+
+> ⚠️ 变量由角色卡自带的脚本读写，正则规则**不能**读写变量——正则只做文本查找替换，不会执行脚本。
 
 ### 插入位置
 

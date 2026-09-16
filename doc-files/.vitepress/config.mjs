@@ -16,12 +16,13 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '开始使用', link: '/guide/what-is-nyaachat' },
       { text: '角色扮演', link: '/roleplay/' },
-      { text: '知识库', link: '/knowledge-base/' },
-      { text: '生图', link: '/features/image-generation' },
+      { text: '扩展', link: '/extensions/' },
       { text: '账号系统', link: '/account/' },
       {
         text: '进阶功能',
         items: [
+          { text: '知识库', link: '/knowledge-base/' },
+          { text: '生图', link: '/features/image-generation' },
           { text: '持久记忆', link: '/features/memory' },
           { text: '破甲模块', link: '/features/bypass' },
         ],
@@ -55,6 +56,16 @@ export default defineConfig({
             { text: '角色规则·世界书', link: '/roleplay/world-info' },
             { text: '正则规则', link: '/roleplay/regex' },
             { text: '角色变量', link: '/roleplay/variables' },
+          ],
+        },
+      ],
+      '/extensions/': [
+        {
+          text: '扩展',
+          items: [
+            { text: '扩展总览', link: '/extensions/' },
+            { text: '脚本运行器', link: '/extensions/script-runner' },
+            { text: '引用朗读', link: '/extensions/quote-tts' },
           ],
         },
       ],
