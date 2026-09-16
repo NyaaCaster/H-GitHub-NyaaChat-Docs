@@ -24,14 +24,6 @@ features:
     title: 开始使用
     details: 从界面导览到 QinyAPI 配置，三步发出第一条对话，快速上手 NyaaChat
     link: /guide/quick-start
-  - icon: 🎭
-    title: 角色扮演
-    details: 从角色创建、世界书规则到正则替换与变量系统——完整的角色扮演工具箱
-    link: /roleplay/
-  - icon: 📚
-    title: 知识库
-    details: 上传文档构建私有 RAG 知识库，混合语义检索，绑定角色规则自动注入对话
-    link: /knowledge-base/
   - icon: 🐾
     title: 账号系统
     details: NyaaAcount 统一登录、猫粮经济、五项额度扩容、云端设置与记录同步
@@ -40,6 +32,14 @@ features:
     title: 破甲模块
     details: 面向 QinyAPI 的 Gemini 模型，按目标开启破甲、按需勾选设定条目
     link: /features/bypass
+  - icon: 🧩
+    title: 扩展
+    details: 脚本运行器让角色卡驱动对话变量与状态栏，引用朗读为选定内容配上语音
+    link: /extensions/
+  - icon: 📚
+    title: 知识库
+    details: 上传文档构建私有 RAG 知识库，混合语义检索，绑定角色规则自动注入对话
+    link: /knowledge-base/
   - icon: 🎨
     title: 生图
     details: 内置 NyaaComfyUI 工作流与画风，提示词由独立智能体生成；也支持自建 ComfyUI 与图片 API
