@@ -66,6 +66,7 @@ export default defineConfig({
             { text: '扩展总览', link: '/extensions/' },
             { text: '脚本运行器', link: '/extensions/script-runner' },
             { text: '引用朗读', link: '/extensions/quote-tts' },
+            { text: 'EJS模板', link: '/extensions/ejs-template' },
           ],
         },
       ],
