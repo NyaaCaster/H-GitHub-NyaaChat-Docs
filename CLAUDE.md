@@ -23,7 +23,7 @@ NyaaChat 用户使用手册文档站，基于 VitePress 构建，Docker 容器�
 ```
 doc-files/
 ├── index.md            # 首页
-├── guide/              # 开始使用（5 篇）
+├── guide/              # 开始使用（6 篇）
 ├── roleplay/           # 角色扮演（9 篇）
 ├── knowledge-base/     # 知识库（6 篇）
 ├── account/            # 账号系统（6 篇）

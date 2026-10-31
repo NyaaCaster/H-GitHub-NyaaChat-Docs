@@ -40,6 +40,7 @@ export default defineConfig({
             { text: '界面导览', link: '/guide/interface-tour' },
             { text: '配置对话模型', link: '/guide/configure-model' },
             { text: '开始第一次对话', link: '/guide/first-chat' },
+            { text: 'SillyTavern + QinyAPI 快速上手', link: '/guide/sillyTavern_QinyAPI_QuickStart' },
           ],
         },
       ],

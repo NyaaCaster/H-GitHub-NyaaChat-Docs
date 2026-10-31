@@ -82,7 +82,8 @@ doc-files/
 │   ├── quick-start.md                快速开始（打开 h.nyaa.host:3095 → 三步上手）
 │   ├── interface-tour.md             界面导览（顶栏两行图标 / 聊天区 / 输入区）
 │   ├── configure-model.md            配置对话模型（以 QinyAPI 为例）
-│   └── first-chat.md                 开始第一次对话
+│   ├── first-chat.md                 开始第一次对话
+│   └── sillyTavern_QinyAPI_QuickStart.md SillyTavern + QinyAPI 快速上手（维护期新增，组内末尾）
 │
 ├── roleplay/                         【角色扮演】
 │   ├── index.md                      角色扮演总览

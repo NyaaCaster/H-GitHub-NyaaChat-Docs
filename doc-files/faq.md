@@ -42,7 +42,7 @@
 通常是因为接入点不可达——检查 Base URL 是否正确、网络是否正常、是否存在防火墙阻断。如果你在国内使用 `.com` 接入点，尝试换为 `.icu` 接入点。
 
 **该用哪个模型？**  
-没有"最好"的模型，取决于你的需求：角色扮演推荐 gemini-3.7-flash 或 claude-opus-4-8（创意和情感表现力强）；需要严谨逻辑推理时推荐 GPT-5.5；预算敏感时 DeepSeek 性价比高。详见 [配置对话模型](./guide/configure-model)。
+没有"最好"的模型，取决于你的需求：角色扮演推荐 gemini-3.8-flash 或 claude-opus-4-8（创意和情感表现力强）；需要严谨逻辑推理时推荐 GPT-5.5；预算敏感时 DeepSeek 性价比高。详见 [配置对话模型](./guide/configure-model)。
 
 **对话模型和嵌入模型是同一个 API Key 吗？**  
 不是。对话模型负责生成回复，嵌入模型负责知识库的语义搜索——它们是完全独立的两个服务，需要分别配置各自的 API Key。详见 [前置准备](./knowledge-base/prerequisites)。
@@ -50,7 +50,7 @@
 ## 破甲模块
 
 **破甲模块对哪些模型有效？**  
-只在 **QinyAPI** 提供的 Gemini 模型上生效：`gemini-2.5-pro`、`gemini-3.1-pro-preview`、`gemini-3.7-flash`。其他供应商或其他模型族开启后不会生效。详见 [破甲模块](./features/bypass)。
+只在 **QinyAPI** 提供的 Gemini 模型上生效：`gemini-2.5-pro`、`gemini-3.1-pro-preview`、`gemini-3.8-flash`。其他供应商或其他模型族开启后不会生效。详见 [破甲模块](./features/bypass)。
 
 **开了破甲还是被拒绝／道歉？**  
 先确认**目标与模型匹配**：`gemini2.5pro & 3.1pro` 对应前两个模型，`gemini3.7flash` 对应后者。若模型仍然道歉或拒答，NyaaChat 会自动更换破甲方案重试；全部失败时气泡会显示「已停止重试」，该轮没有正文。另外开发阶段只在**默认组**做过落地测试，其他分组下同名、异名的模型不保证效果。
