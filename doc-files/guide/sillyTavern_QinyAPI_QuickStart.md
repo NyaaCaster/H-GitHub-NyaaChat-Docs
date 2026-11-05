@@ -4,7 +4,7 @@
 | API | 聊天补全 |
 | --- | --- |
 | 聊天补全来源 | 自定义（兼容OpenAI） |
-| 自定义端点（基础 URL） | [https://love.qinyan.icu/v1](https://love.qinyan.icu/register?aff=btB0)<br/>(可在[兑换码购买页](https://qyapi.qinyan.xyz/)面查看) |
+| 自定义端点（基础 URL） | 国内使用：`https://openai.chatnewai.com/v1`<br/>海外使用：`https://love.qinyan.icu/v1`<br/>(可在[兑换码购买页](https://qyapi.qinyan.xyz/)面查看) |
 | 自定义 API 密钥 | 在[令牌管理页面](https://love.qinyan.icu/console/token)复制<br/>注意正确的密钥开头为`sk-`<br/>令牌分组建议使用<br/>`Gemini-Antigravity Ultra` 分组<br/>![img](/images/sillytavern-qinyapi/qinyapi-token-group.png) |
 | 输入模型名 | ！！！不要手动输入！！！ |
 | 可用模型名 | 在下方点击`连接`后，当连接状态显示为`🟢Valid`后可下拉选择<br/>`gemini-3.8-flash` |
@@ -111,11 +111,9 @@ https://github.com/muyoou/st-memory-enhancement.git
 ![img](/images/sillytavern-qinyapi/close-chat.png)![](/images/sillytavern-qinyapi/temporary-chat.png)
 
 然后进入`临时聊天`，发一句`你好`，看是否成功回复
-
-- 如果成功，可以去找角色卡和预设正式开始聊天了（gemini3.8flash破甲推荐`类脑`的`小猫之神`预设）
 - 如果没有成功，全窗口截图`酒馆控制台`发到群里咨询
-
-- - PC上是`酒馆控制台`是启动`start.bat`后出现的命令行窗口
+  - PC上是`酒馆控制台`是启动`start.bat`后出现的命令行窗口
   - 安卓手机上`酒馆控制台`是输入酒馆启动命令的`Termux`应用窗口
-
-- - - 注意安卓手机上保持`Termux`应用窗口小窗模式保持在前台，否则进程容易休眠导致服务无响应
+    - 注意安卓手机上保持`Termux`应用窗口小窗模式保持在前台，否则进程容易休眠导致服务无响应
+- 如果成功，可以去找角色卡和预设正式开始聊天了
+  - 现在公共API如：Gemini、Claude、GPT，都开启了主动学习能力反破甲，无法有效破开，对话时如果使用第三方预设，请不要`开启`对话中的破甲功能，并主要角色卡中`不要`出现色情暴力反社会等违禁内容。
